@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+<!-- 	<form action="数据要提交的地址" method="提交方式(get / post )"> -->
+
+
+<!--  form表单的子元素（子标签）的常用属性：
+		name：
+		表单提交的时候 以 name属性值 为 key值  输入框中的内容 为 value值的形式提交到后台
+		单选框和多选框中起到分组的效果
+		value: 值  1 输入框中的作用:初始值（默认值）   2 在 按钮上的作用：在按钮上显示的文字
+  
+  -->
+
+		<form action="" method="get">
+			<input /><br/> <!-- input是个 万金油 ，默认：单行文本框 -->
+			<input type="text" name="username" value="admin"/><br/><!-- 单行文本框  -->
+			<input type="password" name="pwd" /><br/><!-- 密码文本框  -->
+			<input type="button" name="btn" value="点一下" onclick="alert(666)"/><br/><!-- 普通按钮 （可以结合js来实现）-->
+			<input type="submit" value="登录"/><br/><!-- 提交按钮  -->
+			<input type="reset"/><br/><!-- 重置按钮  -->
+			
+			性别：<!--  属性：checked  默认被选中 name 除了提交用外，还可以作为分组  -->
+			<input type="radio" name="sex" value="m" />男 
+			<input type="radio" name="sex" value="w" checked/>女
+<!-- 			<input type="radio"  value="w" checked="checked"/>未知
+			<input type="radio"  value="w" checked="true"/>未知 -->
+			<br/>
+			是否已婚:<input type="radio" name="hun" value="yes" />已婚
+			<input type="radio" name="hun" value="no" />未婚
+			<br/>
+			爱好：<input type="checkbox" name="hobby" value="yy" checked/>游泳
+			<input type="checkbox"name="hobby" value="yx"/>游戏
+			<input type="checkbox"name="hobby" value="yj" checked/>游金
+			<br/>
+			上传头像：
+			<input  name="myHead" type="file"/>
+			<!-- <input type="file" name = "file" multiple accept="image/gif, image/jpeg"/> -->
+			<input  type="hidden" name="userid" value="p123"/>
+			<!-- 其他类型 可以根据需要 自行了解（date number 等等）  -->
+			<input  type="number" name="userid" value="p123"/>
+			<br/>
+			<!--  button标签  -->
+			<button><img src="img/wyz.webp" width="50px"><br/>帅哥</button>
+			
+			<br/>
+			<!--  下拉框标签  -->
+		所在城市：	
+			<select name="city"><!-- 下拉框父标签 -->
+				<option value="xm">厦门</option><!-- 下拉选项 -->
+				<option value="qz" selected >泉州</option><!-- value可以作为实际传递数据  -->
+			</select>
+			<!-- 了解：	multiple：规定可选择多个选项。
+						size：规定可见下拉框选项的数量。
+ -->
+			<br/>
+			<!-- textarea 多行文本框 -->
+			<textarea name="info" style="width: 1000px;">内容</textarea>
+		 <!-- 了解
+		 cols:规定文本区内的可见宽度。
+		 rows:规定文本区内的可见行数。
+		 maxlength:文本输入的最大字符数量。
+		-->
+		<br/>
+		<!-- 样式不变，内容不可改  可以提交数据 -->
+			只读：<input readonly name="test1" value="只读"/><br/>
+			<!-- 样式变成灰色，内容不可改  不可以提交数据 -->
+			不可用:<input disabled name="test2"value="不可用"/>
+		</form>
+		
+		<!--  简单练习：使用 当前内容，实现一个登录界面（账号 密码 登录按钮 重置按钮 a标签（跳转到修改界面）） 和 修改界面（有默认值 简单的一些效果  ）  -->
+		<!-- 了解一下：
+		label元素：输入标签的文字描述标签，可以代替输入标签响应用户的操作。
+私有属性说明:
+for:输入标签的id属性值。
+
+ -->
+		<label for="sex1">女</label>
+		<input id = "sex1" type="radio" name = "sex"  value = "1"/>
+
+		
+		
+		
+	</body>
+</html>
