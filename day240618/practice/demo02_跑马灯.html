@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<marquee>跑马灯</marquee>
+		<marquee bgcolor="red" width="300px" height="100px" >跑马灯</marquee><br/>
+		<marquee bgcolor="blue" width="300px"  height="100px" behavior="alternate">跑马灯</marquee><br/>
+		<marquee bgcolor="yellow" width="300px" height="100px"  behavior="scroll">跑马灯</marquee><br/>
+		<marquee bgcolor="green" width="300px"  height="100px"  behavior="slide">跑马灯</marquee><br/>
+	<hr />
+		<marquee bgcolor="red" width="300px" height="100px"  direction="left">跑马灯</marquee><br/>
+		<marquee bgcolor="blue" width="300px"  height="100px"  direction="right">跑马灯</marquee><br/>
+		<marquee bgcolor="yellow" width="300px" height="100px"   direction="up">跑马灯</marquee><br/>
+		<marquee bgcolor="green" width="300px"  height="100px"  direction="down" >跑马灯</marquee><br/>
+	<hr />
+		<marquee bgcolor="red" width="300px" height="100px"  loop="1">跑马灯</marquee><br/>
+		<marquee bgcolor="blue" width="300px"  height="100px"  loop="2">跑马灯</marquee><br/>
+		<marquee bgcolor="yellow" width="300px" height="100px"    loop="3">跑马灯</marquee><br/>
+		<marquee bgcolor="green" width="300px"  height="100px"  loop="-1" >跑马灯</marquee><br/>
+		
+	<hr />
+		<marquee bgcolor="red" width="300px" height="100px" >跑马灯</marquee><br/>
+		<marquee bgcolor="blue" width="300px"  height="100px"  scrollamount="6">跑马灯</marquee><br/>
+		<marquee bgcolor="yellow" width="300px" height="100px" scrollamount="1"  >跑马灯</marquee><br/>
+		<marquee bgcolor="green" width="300px"  height="100px"  scrollamount="100">跑马灯</marquee><br/>
+		
+			
+	<hr />
+		<marquee bgcolor="red" width="300px" height="100px" >跑马灯</marquee><br/>
+		<marquee bgcolor="blue" width="300px"  height="100px"  scrolldelay="100">跑马灯</marquee><br/>
+		<marquee bgcolor="yellow" width="300px" height="100px" scrolldelay="200"  >跑马灯</marquee><br/>
+		<marquee bgcolor="green" width="300px"  height="100px"  scrolldelay="300">跑马灯</marquee><br/>
+			
+	
+	<hr />
+	<!-- 结合了  js的知识点： 触发事件   
+		onmouseover  鼠标覆盖到当前的标签上会触发
+		onmouseover  鼠标移开到当前的标签上会触发
+	   this 当前本身（当前对象：当前的标签）
+		stop()  停止（不动）
+		start() 开始（继续滚动）
+	   -->
+	<marquee onmouseover="this.stop()" onmouseout="this.start()">跑马灯</marquee>
+	
+	
+	
+	
+	</body>
+</html>
