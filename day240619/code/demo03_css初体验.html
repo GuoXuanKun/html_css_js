@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 内部样式（head中的style标签中） -->
+		<style type="text/css">
+			/* 写在这里的代码，需要“找到"指定的标签，让样式作用在它身上 */
+			/* 选择器 */
+			/*  三大基本选择器：
+			  直接用标签名：标签选择器  页面中所有的该标签 被选中 ，加上样式 
+			  */
+			h1{
+				color: pink;
+				background-color: yellow;
+				/* border: 1px red solid;
+				text-decoration: underline; */
+			}
+			h2{
+				color: blue;
+				background-color: yellow;
+				/* border: 1px red solid;
+				text-decoration: underline; */
+			}
+			
+			/* h3{
+				border: 1px red solid;
+				text-decoration: underline;
+			}
+			h4{
+				border: 1px red solid;
+				text-decoration: underline;
+			} */
+			
+			/* 类选择器  ：注意：前缀 点  */
+			.hc{
+				color: greenyellow;
+				border: 1px red solid;
+				text-decoration: underline;
+			}
+			/* id选择器：注意点：前缀 # ,id是唯一的（由程序员自觉维护）  */
+			#h4id{
+				color: gold;
+				font-weight:500;/* 是否加粗（100~500 不加粗 600以上加粗 ） */
+			}
+			
+			/*  权重（优先级）   ： id  > class > 标签   */
+		</style>
+		
+		
+	</head>
+	<body>
+		<!-- 
+			1 css样式 负责美（包括颜色 大小 布局等等）
+			 
+			 语法：  1 内联样式 
+					2 内部样式
+					3 外部样式
+			
+		 
+		 -->
+		<!--  a 内联样式（少用）:优点，直接作用在标签上  缺点：一段代码只能给一个标签用（如果多个标签一样的样式效果，就要重复写，造成代码冗余）  -->
+		<p style="color: red;font-size: 30px;">今天天气有点冷</p>
+		
+		<h1 class="hc">111111</h1>
+		<h2 class="hc">222222</h2>
+		<h3 class="hc">333333</h3>
+		<h4 class="hc" id="h4id">444444</h4>
+		<!-- 不要出现重复id的标签 -->
+<!-- 		<h4 class="hc" id="h4id">4444444</h4> -->
+		
+		
+		
+		
+		
+	</body>
+</html>
