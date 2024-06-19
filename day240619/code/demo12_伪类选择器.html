@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/*  lv ha 驴哈  */
+			/*  鼠标点击前 */
+			#a1id:link{
+				border: 1px solid red;
+			}
+			/*  鼠标点击后 */
+			#a1id:visited{
+				border: 1px solid orange;
+			}
+			
+			
+			/*  鼠标悬停(最有用的是它) */
+			#a1id:hover{
+				background-color: aqua;
+			}
+			
+			
+			/* 长按不放 */
+			#a1id:active{
+				background-color: greenyellow;
+			}
+			
+			/*  因为 link 在浏览器的使用中会出问题，不在用伪类选择器 */
+			/* 优先级（权重）有叠加效果 */
+			#pid #a2id{ /* 100+100 */
+				color: black;
+			}
+			
+			#pid #a2id:hover{ /* 100+?*/
+				color: blue;
+			}
+			
+			/* 伪类选择器中的hover 适用于 所有标签 */
+			#p2id{
+				background-color: pink;
+				width: 100px;
+				height: 100px;
+			}
+			#p2id:hover{
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+			}
+			
+			
+			
+			
+			
+			
+		</style>
+		
+		
+	</head>
+	<body>
+		
+		<a  id="a1id"  href="http://www.baidu.com">百度一下</a>
+		
+		<p id="pid">
+		<a id="a2id" href="http://www.baidu.com">百度一下</a>
+		</p>
+		
+		<p id="p2id">一段话</p>
+		
+		
+	</body>
+</html>
