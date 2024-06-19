@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style type="text/css">
+			
+			/* mysql select * from xxxx * 所有字段  */
+			* {
+				color: red;
+				/*慎用 一般是  统一页面 字体大小 字体类型等等  */
+				/* 通用选择器的优先级不高 */
+				border: 1px solid red;
+
+			}
+
+			p {
+				border: 2px solid yellowgreen;
+			}
+			
+			/*  通用选择器 可以 和 其他选择器 搭配使用，更保险 */
+			#d1id *{
+				background-color: palegreen;
+			}
+			
+			/* 也可以用群组选择器 */
+			
+			/*  p, h1, h2{
+				text-decoration: line-through;
+			} */
+			
+			#d2id p, #d2id h1,#d2id h2{
+				text-decoration: line-through;
+			}
+			
+		</style>
+
+	</head>
+	<body>
+		<!-- div是最纯粹的块元素（p h1~h6 都有自带样式 ） -->
+		<div id="d1id">
+			<p>pppp</p>
+			<h1>111</h1>
+			<h2>222</h2>
+			<a href="">百度一下</a>
+		</div>
+		
+		<div id="d2id">
+			<p>pppp</p>
+			<h1>111</h1>
+			<h2>222</h2>
+			<a href="">百度一下</a>
+		</div>
+
+		<a href="">aaa</a>
+		<b>bbb</b>
+
+
+	</body>
+</html>
