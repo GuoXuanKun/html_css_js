@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				font-size: 20px;
+			}
+			
+			/* b{
+				background-color: red;
+			} */
+			/* .bc{
+				background-color: red;
+			} */
+			/*   组合选择器：各种选择器通过各种语法组合成新的选择器  */
+			/* 后代选择器（子孙后代都会被选中） 慎用 */
+			/* 注意：用空格隔开 */
+			.pc b{
+				background-color: red;
+			}
+			/* 子代选择器（子元素选择器） 常用  只针对 父级标签底下的第一代 */
+			/* 注意：用空格隔开 */
+			.pc > b{
+				border:5px blue solid;
+			}
+			/* 可以有多层叠加  */
+			.pc > a >b{
+				color: white;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<p id="pid" class="pc">
+			<b>加粗</b>
+			<b>加粗</b>
+			<b>加粗</b>
+			<b>加粗</b>
+			<s>删除</s>
+			<u>下划线标签</u>
+			<a href=""><b>百度一下</b></a>
+		</p>
+		
+		<b>加粗2</b>
+		
+		
+		<p>This is 
+		    <strong>very</strong> 
+		    <strong>very</strong> 
+		important.
+		</p>
+		<p>This is 
+		     <em>really <strong>very</strong></em> 
+		important.
+		</p>
+
+		
+		
+		
+	</body>
+</html>
