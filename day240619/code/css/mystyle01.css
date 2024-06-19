@@ -1,0 +1,32 @@
+/* css文件中，直接写 选择器 以及对应的样式，不需要在加style标签了 */
+
+
+table {}
+
+.num {
+	background-color: palevioletred;
+
+}
+
+.other {
+	background-color: goldenrod;
+
+}
+
+
+#dyh {
+	background-color: orange;
+
+}
+
+td {
+	background-color: gainsboro;
+	color: lawngreen;
+	width: 80px;
+	height: 50px;
+	font-weight: 600;
+	text-align: center;
+	/* 文本居中 */
+
+
+}
