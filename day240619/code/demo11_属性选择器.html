@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+			/* 中括号中存放的是 属性名  属性可以是某些标签特有的，也可以是自己编的 */
+			a[href]{
+				color: red;
+			}
+			a[zhw]{
+				color: brown;
+			}
+			
+			input[type]{
+				width: 200px;
+			}
+			
+			input[type="text"]{
+				height: 100px;
+			}
+			
+			p[data="abcd"]{
+				/* background-color: pink; */
+				color: palegoldenrod;
+			}
+			/* 以d开头的 */
+			p[data^="d"]{
+				background-color: pink;
+			}
+			/* 以d结尾的 */
+			p[data$="d"]{
+			background-color: rebeccapurple;
+			}
+			
+			/* 以包含d 的 */
+			p[data*="d"]{
+			border: 1px solid red;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<a >百度一下</a><br/>
+		<a zhw="abc">百度一下</a><br/>
+		<a href="http://www.baidu.com">百度一下</a><br/>
+		
+		<input type="text" /><br/>
+		<input type="password" /><br/>
+		<input type="button" value="普通按钮"/><br/>
+		
+		<p data="abcd">abcd</p>
+		<p data="dabc">dabc</p>
+		<p data="abdc">abdc</p>
+
+		
+		
+	</body>
+</html>
