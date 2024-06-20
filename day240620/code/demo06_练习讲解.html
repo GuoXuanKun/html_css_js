@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style type="text/css">
+			
+			.category {
+				width: 300px;
+				background-color: red;
+				font-size: 20px;
+			}
+
+			.category a {
+				color: white;
+				text-decoration: none;/* 取消下划线  */
+
+			}
+			.category a:hover{
+				color: yellow;
+			}
+			.category ul {
+				padding: 0px;  /* 设置 盒子模型中的知识点 ：内边距 列表 有自带效果 有内边距 */
+			}
+
+			.category ul li {
+				list-style-image: url(img/圣诞礼物包装.png);/* 列表的小图标设置  */
+				list-style-position: inside;/* 列表的小图标定位 */
+
+				background-image: url(img/箭头_向上.png);
+				background-repeat: no-repeat;
+				background-position: 95% 2px;
+				/* height: 30px; 为什么取消高度？ 希望这个高度 由内容 填充 （决定） */  
+				line-height: 30px;
+				cursor: pointer;/* 鼠标样式 */
+			}
+
+			.category ul li:hover {
+				background-image: url(img/箭头_向下.png);
+				background-color: #B61D1D;
+			}
+
+			.category ul li div {
+				display: none;/* 隐藏   不显示  */
+
+			}
+			
+			
+			.category ul li div:hover  {  /* 当鼠标覆盖到div上的时候，触发样式 效果*/
+		
+			}
+			.category ul li:hover div {  /* 当鼠标覆盖到li上面的时候，li的子元素div触发样式效果  */
+				display: block;
+				/*  设为块元素 */
+
+			}
+		</style>
+
+
+	</head>
+	<body>
+
+		<div class="category">
+			<ul>
+
+				<li>
+					<a href="#">家用电器</a>
+					<div>
+						<img src="img/1.jpg.avif" width="300px" />
+					</div>
+				</li>
+
+				<li>
+					<a href="#">手机</a>&nbsp;&nbsp;<a href="#">手机</a>
+					<div>
+						<img src="img/1.jpg.avif" width="300px" />
+					</div>
+				</li>
+
+				<li>
+					<a href="#">电脑、办公</a>
+					<div>
+						<img src="img/1.jpg.avif" width="300px" />
+					</div>
+				</li>
+
+				<li>
+					<a href="#">家具</a>&nbsp;&nbsp;<a href="#">家具</a>&nbsp;&nbsp;<a href="#">厨具</a>
+					<div>
+						<img src="img/1.jpg.avif" width="300px" />
+					</div>
+				</li>
+				
+			</ul>
+
+
+
+		</div>
+
+
+
+	</body>
+</html>
