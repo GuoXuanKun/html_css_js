@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+			/* 块元素 ：可以设置 高度 和  宽度  
+			默认   宽度 百分百 （相对于上级元素留给它的空间）   可以设置宽度
+			 默认  高度 是  0  或 由内容决定					可以设置高度
+			 
+			 */
+			/* div标签：
+			最纯粹的块元素 
+			没有任何的特殊字体效果或者内外边距 ，
+			适合我们进行页面布局处理（像一张白纸）
+			  而且 包来包去 不会有 样式 错乱 
+			  
+			  */
+			 
+			 /* 行内元素：不能设置高度和宽度  （只能由内容决定）*/
+			 
+			 
+			/* 行内块元素：  既有 共享一行的效果 又有 设置高度宽度的效果  */
+			
+			div{
+				width: 300px;
+				height: 300px;
+				background-color: pink;
+			}
+			
+			p{
+				background-color: red;
+				width: 400px;
+				height: 400px;
+				
+				
+			}
+			h1{
+				background-color: blue;
+			}
+			/* 行内元素 不能设置 高度和宽度的 */
+			a,b,i,span{
+				background-color: yellow;
+				width: 100px;
+				height: 100px;
+			}
+			
+			/* 行内块  既有 共享一行的效果 又有 设置高度宽度的效果  */
+			img{
+				height: 100px;
+				
+			}
+			
+			input{
+				width: 200px;
+				height: 100px;
+			}
+			
+			marquee{
+				width: 200px;
+			}
+		</style>
+		
+	</head>
+	<body>
+<!-- 		<div>ddd
+			<p>p</p>
+		</div>
+		<h1>h1</h1>
+		 -->
+		
+		<p>1
+			<p>2
+				<p>3</p>
+			</p>
+		</p>
+		<h1>hhhh</h1>
+		
+		<a href="#">aaaa</a>
+		<b>bbbb</b>
+		<i>iiiii</i>
+		<span>最纯粹的行内元素</span>
+		
+		<img src="img/zhuozi.jpg"/>
+		<img src="img/zhuozi.jpg"/>
+		<input />
+			<input  type="button" value="普通按钮"/>
+		
+<!-- 		<table border="1" width="100px">
+			<tr>
+				<td>111</td>
+			</tr>
+		</table>
+		
+		<table border="1"  width="100px">
+			<tr>
+				<td>111</td>
+			</tr>
+		</table> -->
+		
+		<marquee>9999</marquee>
+		<marquee>9999</marquee>
+		<marquee>9999</marquee>
+	</body>
+</html>
