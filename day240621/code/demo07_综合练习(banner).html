@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+
+			#banner-out {
+				
+				height: 439px;
+				background-image: url(img/bg0.jpeg);<-加上背景图片->
+				background-position: center;<-背景图片水平居中->
+			}
+
+			#banner-in {
+				height: 439px;
+				width: 1200px;
+				/* background-color: rgba(255, 0, 0, .4); */
+				background-position: center;
+				margin: auto;
+
+				position: relative;
+				cursor: pointer;
+
+			}
+
+			#banner-in:hover>#toLeft,
+			#banner-in:hover>#toRight,
+			#banner-in:hover>#tabs {
+				opacity: 0.6;
+				/* rgba */
+
+			}
+
+			#toLeft,
+			#toRight {
+				width: 50px;
+				height: 100px;
+				background-image: url(img/sprite.png);
+
+				position: absolute;
+				top: 170px;
+				/*  */
+				opacity: 0.3;
+
+			}
+
+
+			#toLeft {
+
+				left: 50px;
+
+
+			}
+
+			#toRight {
+				right: 50px;
+				background-position: 50px;
+			}
+
+			#tabs {
+				width: 204px;
+				height: 34px;
+				background-color: yellow;
+				position: absolute;
+				bottom: 50px;
+				left: 500px;
+				/*    */
+				border-radius: 16px;
+				opacity: 0.3;
+
+			}
+
+			#tabs>div {
+				width: 28px;
+				height: 28px;
+				border: 1px solid red;
+				text-align: center;
+				line-height: 28px;
+				float: left;
+				border-radius: 14px;
+				margin: 2px;
+			}
+			#toJump{
+				display: inline-block;
+				width: 1200px;
+				height: 439px;
+				/* background-color: yellow; */
+				
+				
+			}
+			
+			
+		</style>
+
+	</head>
+	<body>
+		<div id="banner-out">
+			
+				<div id="banner-in">
+
+					<div id="toLeft" onclick="alert('上一张')"></div>
+
+					<div id="toRight" onclick="alert('下一张')"></div>
+
+					<div id="tabs">
+						<div onclick="alert('第1张')">1</div>
+						<div onclick="alert('第2张')">2</div>
+						<div onclick="alert('第3张')">3</div>
+						<div onclick="alert('第4张')">4</div>
+						<div onclick="alert('第5张')">5</div>
+						<div onclick="alert('第6张')">6</div>
+
+					</div>
+					<a id="toJump" href="http://www.baidu.com">
+					</a>
+				</div>
+			
+		</div>
+
+
+
+
+	</body>
+</html>
