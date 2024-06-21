@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			
+			/*   块元素 和 行内元素 
+			在盒子模型中的注意点：
+				  1 块 可以设置 高度 和 宽度  
+					行内 没有（由内容填充）
+				  2 块 可以设置 外边距 块和块之间的实际距离为 两个元素中的最大外边距宽度
+				    行内 可以设置 外边距（只有左右，没有上下）而且 元素和元素之间的距离是外边距宽度相加
+				  3 块和行内 都可以设置内边距
+				  但是：特别注意，塌陷问题：块元素的外边距会 侵犯到 行内元素中（无视它的内边距）
+				  	  
+			 */
+			
+			
+			#father{
+				width: 1000px;
+				height: 1000px;
+				
+				border: 1px solid blue;
+				background-color: pink;
+				
+				margin: 50px;
+				padding: 30px;
+				
+				
+			}
+			#father div,a,b{
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+				background-color: yellow;
+				
+				margin: 50px;
+				padding: 50px;
+				
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+		</style>
+		
+		
+	</head>
+	<body>
+		<div id="father">
+			<div id="son1">son1</div>
+			<div id="son2">son2</div>
+			<div id="son3">son3</div>
+		
+			<a href="早复习.html">早复习</a>
+			<b>bbbbb</b>
+		</div>
+		
+		
+		
+	</body>
+</html>
