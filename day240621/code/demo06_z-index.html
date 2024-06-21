@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#father {
+				width: 500px;
+				height: 500px;
+				background-color: pink;
+				border: 1px solid blue;
+
+				position: absolute;
+				/* 
+				有占位的，不会影响父级元素的正常显示	
+				 
+				 
+				 
+				 */
+				z-index: 999;
+			}
+
+			#son1,
+			#son2,
+			#son3 {
+
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				border: 1px solid red;
+				position: absolute;
+				/* 绝对定位：没有占位  */
+			}
+
+			#son1 {
+				top: 50px;
+				left: 50px;
+				z-index: 9;
+
+
+			}
+
+			#son2 {
+				top: 70px;
+				left: 70px;
+				z-index: 10;
+
+			}
+
+			#son3 {
+				top: 100px;
+				left: 100px;
+				z-index: 1000;
+
+			}
+
+			#floor {
+				background-color: black;
+				height: 100px;
+				width: 1000px;
+				position: absolute;
+				z-index: 100;
+			}
+		</style>
+
+	</head>
+	<body>
+
+		<div id="father">
+			<div id="son1">son1</div>
+			<div id="son2">son2</div>
+			<div id="son3">son3</div>
+
+		</div>
+
+		<div id="floor"></div>
+
+
+	</body>
+</html>
