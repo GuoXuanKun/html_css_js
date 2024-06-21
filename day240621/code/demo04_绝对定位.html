@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			
+			#father{
+				width: 500px;
+				height: 500px;
+				background-color: pink;
+				border: 1px solid blue;
+				
+				position: relative;
+				/* 
+				有占位的，不会影响父级元素的正常显示	
+				 
+				 
+				 
+				 */
+				
+			}
+			#son1,#son2,#son3{
+				
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				border: 1px solid red;
+			}
+			
+			#son2{
+				position: absolute;/* 绝对定位：没有占位  */
+				top:10px;/* 参考点：为它的父级元素，并且该父级元素必须有position修饰 */
+				
+				
+				
+				
+			}
+			
+			
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="father">
+			<div id="son1">son1</div>
+			<div id="son2">son2</div>
+			<div id="son3">son3</div>
+		
+		</div>
+		
+		<div style="background-color: black;height: 100px;"></div>
+		
+		
+	</body>
+</html>
