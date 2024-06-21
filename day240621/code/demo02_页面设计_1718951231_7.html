@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				margin: 0;
+				background-color: rgba(0,0,0,0.1);/*   a  不透明度 */
+				
+			}
+			/* a{
+				color: red;
+			} */
+			
+			.header{
+				width: 1180px;
+				margin: auto;
+				height: 80px;
+				background-color: gainsboro;
+				text-align: center;
+				margin-bottom: 10px;
+				padding: 10px;
+				/*   小任务：有空的时候，百度 查一下，如何不用一点点计算，就能直接得到 高度和宽度的设置 包含了内边距  */
+				
+			}
+			
+			.nav{
+				width: 1200px;
+				margin: auto;
+				height: 50px;
+				background-color: lightgoldenrodyellow;
+				text-align: center;
+				margin-bottom: 10px;
+				
+			}
+			
+			.contain{
+				width: 1200px;
+				margin: auto;
+				/* height: 500px; */
+				background-color: aliceblue;
+				text-align: center;
+				margin-bottom: 10px;
+				overflow:hidden;
+				
+			}
+			
+			
+			.contain>div{
+				
+				float: left;
+				height: 480px;
+				margin-bottom:10px ;
+				background-color: pink;
+				
+				margin: 10px 0px 10px 10px ;
+				
+			}
+			/*   290 580 290   */
+			.contain>.lside{
+				width: 290px;
+			}
+			
+			.contain>.content{
+				width: 580px;
+			}
+			.contain>.rside{
+				width: 290px;
+			}
+			
+			
+			.floor{
+				
+				height: 100px;
+				background-color: black;
+				text-align: center;
+				margin-bottom: 10px;
+				color: white;
+				
+			}
+			#toTop:hover{
+				color: white;
+				background-color: red;
+				
+			}
+			#toTop{
+				width: 50px;
+				height: 50px;
+				color: red;
+				text-align: center;
+				background-color: white;
+				position: fixed;/* 固定定位 :脱离 原来 占位 （文档流） */
+				/* 参考点： 浏览器 四边 */
+				/*top: 10px; 离顶部多少 */
+				/* bottom: 40px;离底部多少  */
+				/*  距离顶部整体的一半的距离 */
+				top:50%;
+				
+				/*left: 10px; 离左侧多少 */
+				/* right: 40px; 离右侧多少 */
+				/*  距离左侧整体的一半的距离 */
+				left: 50%;
+				
+				/* 通过外边距的方式将div的显示部分平移过去*/
+				margin-left:600px;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div class="header" id="header">header</div>
+		<div class="nav">nav</div>
+		<div class="contain">
+			<div class="lside">lside</div>
+			<div class="content">content</div>
+			<div class="rside">rside</div>
+			
+		</div>
+		
+		<div style="height: 1000px;background-color: yellow;"></div>
+		<a href="#header"><div id="toTop">^<br/>顶部</div></a>
+		
+		<div class="floor">floor</div>
+		
+		
+		
+	</body>
+</html>
