@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			
+			/*  浮动元素相当于 没有占位（没有占空间了 ）
+			 
+				会造成几种情况：
+				1 后面的非浮动元素 会认为 前面是空的，会往上跑（也会造成被浮动的元素挡住 ，决绝方案就是清除浮动）
+			    2 父级元素 中的所有子元素 都浮动了，相当它的内容为空，如果父级元素不设置高度，默认 高度 0
+					解决方案：	1 在这些浮动子元素 后面加一个非浮动元素，设置为清除浮动效果
+								2 通过溢出隐藏 设置 overflow: hidden; 能够实现 承认浮动占位一个特殊设置
+			 */ 
+			
+			#father {
+				width: 500px;
+				/* height: 500px; */
+
+				border: 1px solid blue;
+				background-color: pink;
+				overflow: hidden;
+
+
+
+			}
+
+			#father .sc {
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+				background-color: yellow;
+				float: left;/* 浮动 */
+
+
+			}
+			
+			#bottom{
+				height: 100px;
+				background-color: black;
+				color: white;
+				clear: both;/* left right  both（推荐）   元素被向下移动，以清除前面元素左右浮动造成影响 */
+			}
+		
+			#father #son3{
+				/* height: 101px; */
+				margin-bottom: 1px;
+			}
+
+				</style>
+
+	</head>
+	<body>
+		<!-- 为了实现 块元素 横着放的效果（共享一行）（块元素 默认 独占一行）  -->
+
+		<div id="father">
+			<div id="son1" class="sc">son1</div>
+			<div id="son2"class="sc">son2</div>
+			<div id="son3"class="sc">son3</div>
+			<div id="son4"class="sc">son4</div>
+			<div id="son5"class="sc">son5</div>
+			<div id="son6"class="sc">son6</div>
+			<div id="son7"class="sc">son7</div>
+			<div id="son8"class="sc">son8</div>
+			<!-- <div id="bottom">底部</div> -->
+		</div>
+
+	</body>
+</html>
