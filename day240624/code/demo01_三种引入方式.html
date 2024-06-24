@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!-- 外部js文件的引入，注意 引入的script标签 中间（内容）不能在写任何js代码了，否则内容部分的js代码会失效 -->
+				<script src="js/js01.js">
+					// alert("引入script标签中的内容位置"); 无效代码
+					
+				</script>
+
+		
+		
+		<!-- 内嵌（内部）引入 卸载html中，任意地方都可以，注意 加载顺序 -->
+		<script type="text/javascript">
+			
+			alert(1);
+			
+			
+		</script>
+		
+	</head>
+	<!-- js是一门弱类型的语言：字符和字符串 都用 引号 括起来，单引号或双引号都可以以 -->
+	<body>
+		<!-- 1 写在 标签中 通常和 事件结合（比如点击事件） -->
+		<!--   了解一下：一些常用的js方法：alert 弹出框（消息提示框）  -->
+		<input type="button" value="点一下" onclick="alert('今天天气不错')"/>
+		
+		
+		<script type="text/javascript">	
+			alert(2);
+			
+		</script>
+	</body>
+</html>
+
+
+		<script type="text/javascript">	
+			alert(3);/* 写在这里也能执行，但不规范，不推荐 */
+			
+		</script>
