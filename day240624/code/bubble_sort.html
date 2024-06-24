@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 冒泡排序 -->
+		<script>
+			var arr = [9, 2, 3, 7, 5, 8];
+			document.write(arr);
+			document.write("<br/>")
+			// 循环比较的次数
+			for (var i = 0; i < arr.length; i++){
+				// 互相对比然后进行交换位置
+				for(var j = 0; j < arr.length-1;j++){
+					if(arr[j]>arr[j+1]){
+						var temp;
+						temp = arr[j+1];
+						arr[j+1]=arr[j];
+						arr[j]=temp;
+					}
+				}
+			}
+			document.write(arr);
+		</script>
+	</body>
+</html>
