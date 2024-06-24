@@ -61,7 +61,6 @@
           - number类型其他取值
             - NaN：非数字。当执行parseInt无有效数字时返回
             - Infinity：无穷。当超过浮点类型最大范围时
-
     - String 类型
       - 转义字符 在 `alert()` 以及 `console.log()` 中可以使用
       - 字符串的比较 `==` 
