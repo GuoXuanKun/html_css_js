@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var age = 18;
+			/* 条件分支语句 */
+			/* 单分支语句 */
+			if (age >= 18) {
+				document.write("已成年");
+				document.write("----<br/>");
+			}
+			/* 双分支语句 */
+			if (age >= 18) {
+				document.write("已成年");
+				document.write("----<br/>");
+			} else {
+				document.write("未成年");
+				document.write("----<br/>");
+			}
+
+			/* 多分支语句 
+			0~18未成年  18~30青年 30~50 中年 50~120 老年
+			
+			*/
+			age = 150;
+			if (age > 0 && age <= 120) {
+
+				if (age < 18) {
+					document.write("少年");
+					document.write("----<br/>");
+				} else if (age < 30) {
+					document.write("青年");
+					document.write("----<br/>");
+				} else if (age < 50) {
+					document.write("中年");
+					document.write("----<br/>");
+				} else {
+					document.write("老年");
+					document.write("----<br/>");
+				}
+				
+			} else {
+				document.write("年龄输入有误");
+			}
+			
+			
+			document.write("<br/>");
+			
+			
+			if (age < 18 && age>0) {
+				document.write("少年");
+				document.write("----<br/>");
+			} else if (age < 30) {
+				document.write("青年");
+				document.write("----<br/>");
+			} else if (age < 50) {
+				document.write("中年");
+				document.write("----<br/>");
+			} else if(age<=120) {
+				document.write("老年");
+				document.write("----<br/>");
+			}else{
+				document.write("年龄输入有误");
+			}
+			
+			
+			/*    令狐冲考试：
+			
+			
+			成绩 0~60	不及格  思过崖面壁
+			成绩 60~70	和任盈盈约会
+			成绩 70~80	和桃谷六仙喝酒
+			成绩 80~90	和任我行学功夫
+			成绩 90~100	和东方不败学功夫
+			超出  		考试作弊 逐出师门
+			
+			
+			
+				
+				*/
+			/* 输入弹出框 */
+		var score=	prompt("请输入成绩");/* 第一个参数 显示问题 ，第二个参数 默认值（可选）  */
+		// alert(score);	
+		if(0 < score && score < 60){
+			document.write("面壁");
+		}else if(60 < score && score < 70){
+			document.write("约会");
+		}else if(70 < score && score < 80){
+			document.write("喝酒");
+		}else if(80 < score && score < 90){
+			document.write("任我行学功夫");
+		}else if(90 < score && score < 100){
+			document.write("东方不败学功夫");
+		}else{
+			document.write("逐出师门");
+		}
+
+		</script>
+
+
+
+
+	</body>
+</html>
