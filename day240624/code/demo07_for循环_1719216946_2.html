@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			//  变量初始化   循环条件  增量
+			// for(;;){  // 小心 死循环
+			// 	// alert(666);
+
+			// }
+
+			for (var i = 0; i < 10; i++) {
+
+				document.write("<br/>i:" + i);
+
+			}
+			/* 语法注意：for循环上用到的变量 i  在循环外 依旧 可用（全局变量） */
+			document.write("<br/>外面：i：" + i);
+
+
+			// break（退出当 前 循环）  和   continue（退出当 次 循环） 区别 
+			document.write("<br/>");
+			for (var i = 0; i < 10; i++) {
+
+				if (i == 5) {
+					// break;
+					continue;
+				}
+				document.write("<br/>i:" + i);
+			}
+
+			document.write("<hr/>")
+
+			// 如何打印 5*5 正方形
+			// * * * * *  
+			// * * * * *  
+			// * * * * *  
+			// * * * * *  
+			// * * * * *  
+			// var num =10;
+			for (var i = 0; i < 5; i++) {
+
+				for (var j = 0; j < 5; j++) {
+
+					document.write("*&nbsp;&nbsp;");
+
+				}
+				document.write("<br/>");
+
+			}
+			document.write("<hr/>");
+			// *
+			// * *
+			// * * *
+			// * * * *
+			// * * * * *
+
+			// 如何打印 5*5 正方形
+			for (var i = 0; i < 5; i++) {
+
+
+				for (var j = 0; j <= i; j++) {
+
+					document.write("*&nbsp;&nbsp;");
+
+				}
+				document.write("<br/>");
+
+			}
+			document.write("<hr/>");
+			// ####*
+			// ###* *
+			// ##* * *
+			// #* * * *
+			// * * * * *
+			for (var i = 0; i < 5; i++) {
+
+
+				for (var j = 0; j < 5 - i; j++) {
+
+					document.write("&nbsp;&nbsp;");
+
+				}
+
+				for (var k = 0; k <= i; k++) {
+
+					document.write("*&nbsp;&nbsp;");
+
+				}
+
+				document.write("<br/>");
+
+			}
+
+
+
+
+
+
+			// 试着 加入 continue break知识点完成
+			//     *
+			//    * *
+			//   *   *
+			//  *     *
+			// * * * * *
+
+			document.write("<hr/>");
+
+			for (var i = 0; i < 5; i++) {
+
+
+				for (var j = 0; j < 5 - i; j++) {
+
+					document.write("&nbsp;&nbsp;");
+
+				}
+
+				for (var k = 0; k <= i; k++) {
+
+					if (k == 0 || k == i || i == 4) {
+						document.write("*&nbsp;&nbsp;");
+					} else {
+						document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+					}
+
+				}
+
+				document.write("<br/>");
+
+			}
+
+
+			/* 九九乘法表 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			//     *
+			//    * *
+			//   *   *
+			//  *     *
+			// *       *
+			//  *     *
+			//   *   *	
+			//    * *
+			//     *
+		</script>
+
+
+		<table border="1">
+
+			<script type="text/javascript">
+				for (var i = 1; i <= 9; i++) {
+					document.write("<tr>");
+					for (var j = 1; j <= i; j++) {
+						document.write("<td>" + (j + "*" + i + "=" + i * j) + "</td>")
+					}
+					document.write("</tr>");
+				}
+			</script>
+
+
+		</table>
+
+
+
+
+
+
+
+
+	</body>
+</html>
