@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			/* 数字类型 number */
+			var num1  = 1;
+			var num2  = 2.3;
+			document.write("num1:"+typeof(num1)+",num2:"+typeof(num2));
+			document.write("<br/>");
+			
+			
+			// document.write("stu1:"+typeof(stu1));
+			document.write("<br/>");
+			
+			// NaN: not a number
+			var str="abc123.123abc";
+			document.write("parseInt(str):"+parseInt(str));
+			document.write("<br/>");
+			document.write("parseFloat(str):"+parseFloat(str));
+			
+		
+			
+			
+			
+			
+			
+			
+			/* 字符串类型 string   单引号和双引号都是一样的*/
+			var str1 ='abc';
+			var str2="abc";
+			document.write("str1:"+typeof(str1)+",str2:"+typeof(str2));
+			document.write("<br/>");
+			
+			/* 转义字符： */
+			// alert("abc\nabc");
+			//console  控制台  log 日志 
+			// console.log("abc\nabc");
+			
+			var info  ="我是\"帅哥\"";
+			document.write("info:"+info);
+			document.write("<br/>");
+			
+			
+			/* null类型  和 undefined 区别*/
+			var v1  =null;  // object  null 
+			var v2;			// undefined
+			
+			document.write("v1:"+v1+",v2:"+v2); //v1:null,v2:undefined
+			document.write("<br/>");
+			document.write("v1:"+typeof(v1)+",v2:"+typeof(v2));
+			document.write("<br/>");
+			
+			/*   布尔类型   boolean   */
+			var flag1=true;
+			var flag2 =false;
+			document.write("flag1:"+typeof(flag1)+",flag2:"+typeof(flag2));
+			document.write("<br/>");
+			
+			/* 对象类型： */
+			
+			/*  数组类型 */
+			var arr=[1,2,3];
+			// var arr2 = new Array();
+			document.write("arr:"+typeof(arr));
+			document.write("<br/>");
+			
+			
+			/* 对象类型（属性方法等等） */
+			var stu1 ={ /* 属性和属性之间用逗号隔开 */
+				sno:1,  /* 属性名：属性值*/
+				sname:"zhw", /* 属性名：属性值*/
+				study:function(){ /* 方法名：方法体*/
+					alert("我爱学习");
+				}
+			};
+			/* 关于对象及其属性和方法的调用（同java一样） */
+			 console.log(stu1);
+			console.log(stu1.sname);
+			stu1.study();
+			
+	
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>
