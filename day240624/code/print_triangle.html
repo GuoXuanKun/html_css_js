@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			for (var i = 0; i < 5; i++) {
+				for (var j = 0; j < 5 - i; j++) {
+					document.write("&nbsp;");
+				}
+				for (var x = 0; x <= i; x++) {
+					document.write("* ");
+				}
+				document.write("<br/>");
+			}
+			document.write("<br/>");
+			document.write("<br/>");
+			document.write("<br/>");
+			for (var i = 0; i < 5; i++) {
+				for (var j = 0; j < 5 - i; j++) {
+					document.write("&nbsp;");
+				}
+				for (var x = 0; x <= i; x++) {
+					if(i!=5-1){
+						if(x==0||x==i){
+							document.write("* ");
+						}else{
+							document.write("&nbsp; ");
+						}
+					}else{
+						document.write("* ");
+					}
+
+				}
+				document.write("<br/>")
+			}
+			document.write("<br/>");
+			document.write("<br/>");
+			document.write("<br/>");
+			
+			/* document.write("<table border="1">");
+			for (var i = 1; i <= 9; i++) {
+				
+				document.write("<tr>");
+				for (var j = 1; j <= i; j++) {
+					document.write("<td>" + (j + "*" + i + "=" + i * j) + "</td>")
+				}
+				document.write("</tr>");
+				
+			}
+			document.write("</table>") */
+			document.write("<table border='1'>");
+			for (var i = 1; i <= 9; i++) {
+			    document.write("<tr>");
+			    for (var j = 1; j <= i; j++) {
+			        document.write("<td>"+ j + "x" + i + "=" + i*j + "</td>");
+			    }
+			    document.write("</tr>");
+			}
+			document.write("</table>");
+
+		</script>
+	</body>
+</html>
