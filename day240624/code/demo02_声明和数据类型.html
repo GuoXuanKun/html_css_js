@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			//  关于变量  java  int  double .... 
+			// js中没有这么麻烦，一个var搞定
+			//var 声明 问题：a b c 是什么类型。怎么判断？
+			//  像一个玻璃杯，装入 红酒 就是 红酒杯 装入啤酒 啤酒杯 装入 茶水，茶杯
+			// 实际的类型，由 内容决定（你赋值啥类型，它就是啥类型）
+			var a = 1;
+			var b = "abc";
+			var c = 1.1;
+
+			/* 命名规范：和java一样（严格区分大小写）
+				1   由 数字 字母 下划线  $ 组成
+				2   不能以数字开头
+				3   不能和关键字重名
+				4 	见文思意
+				
+			 */
+			
+			// alert(typeof(a));/*  typeof 判断 变量 类型 方法  */
+			// alert(typeof(b));
+			// alert(typeof(c));
+
+			/*   */
+			document.write("今天天气不错<br/>"); /*document 文档  页面就是 文档 ，write写 在页面中写  */
+
+			document.write(typeof(a));
+			document.write("<br/>");
+			document.write(typeof(b));
+			document.write("<br/>");
+			document.write(typeof(c));
+			document.write("<br/>");
+			
+			/*  结束的时候，分号可以不写，但不规范 */
+			
+			/* 通过逗号的方式，一次性声明多个变量 */
+			var d,e,f;
+			var g=1,h='zhw',i=1.1; /*  类型可以不同 */
+			// java  int a =1,b="abc";
+			
+			/* js中 关于声明的一些问题 */
+			/* 正常先声明 再赋值 最后 使用  */
+			var x =1;
+			document.write("x:"+x);
+			document.write("<br/>");
+			
+			/* 声明 未赋值 */
+			var y;
+			document.write("y:"+y);//不会报错 ：但会显示 undefined 声明未赋值
+			document.write("<br/>");
+			
+			
+			/* 未声明直接赋值 */
+			z =123;
+			document.write("z:"+z);//123 正常显示  不声明也没问题，直接使用，但不规范
+			document.write("<br/>");
+			
+			
+			/* 未声明 未赋值 直接使用  */
+			// document.write("zhw:"+zhw);
+			// document.write("<br/>");
+			//报错：  ReferenceError: zhw is not defined
+			
+			// document.write("hehe<br/>");/* 报错过后，会影响后续代码 */
+			
+		
+			document.write("<br/>");
+			
+			var sname =123;
+			document.write("sname:"+typeof(sname));
+			
+			document.write("<br/>");
+			
+			sname ="zhw";
+			document.write("sname:"+typeof(sname));
+			
+			
+			document.write("<br/>");
+			
+			var sname ="zhw666";/* java 会报错，但js中不会，相当于重新声明了一个 */
+			document.write("sname:"+typeof(sname));
+			
+	
+			
+			
+		</script>
+
+
+
+	</body>
+</html>
