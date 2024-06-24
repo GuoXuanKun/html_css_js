@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			/* 算术运算符： */
+			var a = 3;
+			var b = 7;
+			/* 算术运算中 + 字符串拼接 */
+			document.write("a+b=" + (a + b));
+			document.write("<br/>");
+			document.write("a-b=" + (a - b));
+			document.write("<br/>");
+			document.write("a*b=" + (a * b));
+			document.write("<br/>");
+			document.write("a/b=" + (a / b));
+			document.write("<br/>");
+			document.write("a%b=" + (a % b));
+			document.write("<br/>");
+
+			/* 自增：a++ 先使用 再自增1   和  ++a 先自增1 再使用 */
+			document.write("a++=" + (a++));
+			document.write("<br/>");
+			document.write("b++=" + (++b));
+			document.write("<br/>");
+
+			// b=a+++1; 
+			//1 尽量少些这种代码 （代码的可读性变差）
+			//2 面试前在 去 突击   和 位运算 一样的道理（反码 补码 知识点）
+
+
+			// 赋值运算符
+
+			// var x =1;
+			// var y =2;
+			// var z;
+			var x = 1,
+				y = 2,
+				z;
+
+			z = x;
+			x += y; //x=x+y;
+			x -= y; //x=x-y;
+			x *= y; //x=x*y;
+			x /= y; //x=x/y;
+			x %= y; //x=x%y;
+
+
+
+			var x = 1,
+				y = 2,
+				z = 3;
+
+			document.write("x>y:" + (x > y));
+			document.write("<br/>");
+
+			document.write("x>=y:" + (x >= y));
+			document.write("<br/>");
+
+			document.write("x &lt; y : " + (x < y));
+			document.write("<br/>");
+
+			document.write("x<=y:" + (x <= y));
+			document.write("<br/>");
+
+			document.write("x>y:" + (x > y));
+			document.write("<br/>");
+
+
+			document.write("x==y:" + (x == y));
+			document.write("<br/>");
+
+			document.write("x!=y:" + (x != y));
+			document.write("<br/>");
+
+			// 字符串的比较
+			// 字符串如果是纯数字的，可以进行比较运算
+			// 顺数字的字符串和数字类型的变量可以直接比较（弱类型语言比较包容）
+
+			var str1 = "abc";
+			var str2 = "abc";
+			document.write("str1==str2:" + (str1 == str2));
+			document.write("<br/>");
+			var str3 = "123";
+			var str4 = "123";
+			document.write("str3==str4:" + (str3 == str4));
+			document.write("<br/>");
+			var str5 = "123";
+			var str6 = 123;
+			document.write("str5==str6:" + (str5 == str6));
+			document.write("<br/>"); // == 比较内容，忽略内省
+			document.write("str5===str6:" + (str5 === str6)); //false 也比较了类型
+			document.write("<br/>");
+
+			var str7 = "1";
+			var str8 = 2;
+			document.write("str7 > str8:" + (str7 > str8));
+			document.write("<br/>");
+			document.write("str7 < str8:" + (str7 < str8));
+			document.write("<br/>");
+
+
+			document.write("<hr/>");
+
+			var flag1 = true;
+			var flag2 = false;
+
+			document.write("flag1&&flag2:" + (flag1 && flag2) + "<br/>");
+
+			document.write("true&&true:" + (true && true) + "<br/>");
+			document.write("true&&false:" + (true && false) + "<br/>");
+			document.write("true&&false:" + (false && true) + "<br/>");
+			document.write("true&&false:" + (false && false) + "<br/>");
+
+
+			document.write("flag1||flag2:" + (flag1 || flag2) + "<br/>");
+			document.write("true||true:" + (true || true) + "<br/>");
+			document.write("true||false:" + (true || false) + "<br/>");
+			document.write("false||true:" + (false || true) + "<br/>");
+			document.write("false||false:" + (false || false) + "<br/>");
+
+			document.write("!flag1:" + (!flag1) + "<br/>");
+			document.write("!flag2:" + (!flag2) + "<br/>");
+			
+			
+			var a=1,b=1;
+			
+			document.write(false&&(a++)==(b++));  // 短路了
+			document.write("<br/>");
+			document.write("a:"+a+",b:"+b);
+			document.write("<br/>");
+			
+			/* 位运算   0000 0000   其他的在面试前 恶补一下就可以了 
+						2^0  0001
+						2^1  0010 
+					    2^2  0100
+						2^3  1000
+						
+						0010 1000
+						2
+						  
+					*/
+			document.write(2<<2);
+			document.write(8>>2);
+			
+			document.write("<br/>");
+			
+			
+			/* 三目运算符  条件运算符 */
+			var a=1,b=2,c=3;
+			
+			c=a>b?a:b;  //   if() return  
+			
+			document.write((a>b)?a:b);
+			
+			// 求三个数的最大值 ？？？
+			var a=1,b=2,c=3;
+			var max = (a>b)?((a>c)?a:c):((b>c)?b:c);
+			// alert(max);
+			
+			document.write("<br/>");
+			
+			/*  判断闰年    （能被4整除不能被100整除）  或者 能被400整除  */
+			/* 如果你不太清楚  优先级问题，直接 加括号    */
+			var year  =1988;
+			document.write((year%4==0 && year%100!=0) || year%400==0);document.write("<br/>");
+			
+			document.write(year%400==0 ||(year%100!=0 && year%4==0));document.write("<br/>");
+			
+			var msg   = ((year%4==0 && year%100!=0) || year%400==0)?year+"是闰年":year+"是平年";
+			
+			document.write(msg);
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+
+
+
+
+
+	</body>
+</html>
