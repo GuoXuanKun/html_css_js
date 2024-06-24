@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*  if else 更偏向于 范围性（在xx之间）
+				switch 更偏向于  点 （  ==  ）
+			 */
+			var month = 16;
+
+			switch (month) {
+				default: // 相当于 else
+					document.write("输入有误");
+					document.write("-----<br/>");
+					break; // 注意：当default放在前面的时候，一定要小心 陷阱 没有“break”会怎么样
+
+				case 1:
+					document.write("一月份");
+					document.write("-----<br/>");
+					//break;//直到遇见 break 才会停下来，否则会一直执行下去,直到switch代码结束
+					break;
+				case 2:
+					document.write("二月份");
+					document.write("-----<br/>");
+					break;
+				case 3:
+					document.write("三月份");
+					document.write("-----<br/>");
+					break;
+				default: // 相当于 else
+					document.write("输入有误");
+					document.write("-----<br/>");
+					break;
+
+
+			}
+			// 求月份大小月  
+			// （最大： 1 3 5 7 8 10 12月 31天  2月 28 29天  4 6 9 11 30天）
+			// 附加题：
+			// 分别 输入 年 月  显示 当前年 润 平年  并且这个月份最大天数是几天
+			
+			
+		</script>
+
+
+
+	</body>
+</html>
