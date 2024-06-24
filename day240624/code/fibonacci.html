@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 斐波那契数 -->
+		<script>
+			function fibonacci(a){
+				if(a==1){
+					return 1;
+				}
+				if(a==2){
+					return 1;
+				}
+				return fibonacci(a-1)+fibonacci(a-2);
+			}
+			for (var i = 1; i < 10; i++) {
+				document.write(fibonacci(i)+"&nbsp;&nbsp;");			
+				console.log(fibonacci(i)+"&nbsp;&nbsp;");
+			}
+		</script>
+	</body>
+</html>
