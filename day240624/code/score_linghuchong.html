@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!--   令狐冲考试：
+		
+		
+		成绩 0~60	不及格  思过崖面壁
+		成绩 60~70	和任盈盈约会
+		成绩 70~80	和桃谷六仙喝酒
+		成绩 80~90	和任我行学功夫
+		成绩 90~100	和东方不败学功夫
+		超出  		考试作弊 逐出师门
+		
+		
+		 -->
+
+		<script>
+			var score = prompt("请输入成绩");
+			if (0 <= score && score <= 60) {
+				document.write("面壁");
+			} else if (60 < score && score <= 70) {
+				document.write("约会");
+			} else if (70 < score && score <= 80) {
+				document.write("喝酒");
+			} else if (80 < score && score <= 90) {
+				document.write("任我行学功夫");
+			} else if (90 < score && score <= 100) {
+				document.write("东方不败学功夫");
+			} else {
+				document.write("逐出师门");
+			}
+		</script>
+	</body>
+</html>
