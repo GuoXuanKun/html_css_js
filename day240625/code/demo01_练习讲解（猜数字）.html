@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 获得随机数  （1~10）
+
+			// 三种弹出框
+			//alert("提示内容");	/* 消息弹出框 */
+			//var str  = prompt("提示内容");	/* 输入（内容）弹出框  输入框内容  */
+			//var flag  = confirm("提示内容");/* 确认弹出框  确认 true 取消或关闭 false */
+
+			// for(;;){}
+			var flag = true;
+			// while (true) {
+			while (flag) {
+				var rnum = Math.floor((Math.random() * 10 + 1));
+				alert("新游戏开始：");
+
+				while (true) {
+					var num = prompt("请输入一个1~10整数");
+					if (num > rnum) {
+						alert("猜大了");
+					} else if (num < rnum) {
+						alert("猜小了");
+					} else {
+						alert("恭喜，答对了！");
+						flag = confirm("是否继续？");
+						break;
+					}
+				}
+
+				// if (!flag) {
+				// 	break;
+				// }
+			}
+		</script>
+	</body>
+</html>
