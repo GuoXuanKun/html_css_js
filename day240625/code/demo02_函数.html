@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// func1();函数 在 定以前 或 定义后 都被可以调用 （只要保证页面中有）
+
+			function func1() {
+
+				alert("func1");
+
+			}
+
+			// func1();
+			/* 注意：在函数 参数声明 不用加 var  */
+			function func2(x, y) {
+				alert("func2（旧）:" + x + "," + y);
+			}
+			// func2(1,2);
+			// func2(1,2,3);//只要名字对了，参数不一样，依旧可以调用
+
+			// func2(1); //  少参数 ；少掉的参数 为  ：undefined  声明未赋值
+
+
+
+			/* 自定义的函数中，只有 覆盖 ，没有 重载 一说  */
+			function func2(x, y, z) {
+				alert("func2(新):" + x + "," + y + "," + z);
+
+			}
+			
+			/* 返回值问题  */
+			
+			function func3(){
+				
+				// return "func3 666";   1 提交结束当前函数  2 返回值
+			}
+			
+			var str  = func3();
+			
+			// alert(str);
+			
+			
+			/* 作用域范围问题： */
+			
+			var num1=1; // 函数外面的（全局）
+			var num4=4;
+			var num5=5;
+			var num6=6;
+			function func4(num2,num6){  // 虽然没有var关键字，但写在参数位置的变量都是局部变量
+				var num3 =3;
+				var num4=-4;// 重新声明一个 局部变量 num4 
+				num5=-5; // 调用 是 全局变量 num5
+			}			
+			
+			document.write("<br/>num1："+num1);
+			document.write("<br/>num4："+num4);
+			document.write("<br/>num5："+num5);
+			// document.write("<br/>num3："+num3);报错了
+			func4(2,-6);
+			document.write("<br/>num4："+num4);  // 4 -4?
+			document.write("<br/>num5："+num5);
+			// document.write("<br/>num3："+num3);同样会报错
+			
+			// document.write("<br/>num2："+num2);同样会报错
+			document.write("<br/>num6："+num6); 
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+		
+		
+		
+		
+		
+		<script type="text/javascript">
+			document.write("<hr/>");
+			
+			document.write("<br/>num1："+num1);
+			document.write("<br/>num4："+num4);
+			document.write("<br/>num5："+num5);
+			// document.write("<br/>num3："+num3);报错了
+			func4(2,-6);
+			document.write("<br/>num4："+num4);  // 4 -4?
+			document.write("<br/>num5："+num5);
+			// document.write("<br/>num3："+num3);同样会报错
+			
+			// document.write("<br/>num2："+num2);同样会报错
+			document.write("<br/>num6："+num6); 
+			
+		</script>
+
+		<hr />
+		
+		<script src="js/sj1.js"></script>
+		
+		
+		<!-- 简单的练习：1 函数  ：加法 运算
+						2 尝试： 累加 和 累乘  阶乘	
+		  
+		  
+		  -->
+		
+		
+		
+	</body>
+</html>
