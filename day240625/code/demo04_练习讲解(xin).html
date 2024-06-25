@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 做递归 过程  比较重要 
+			function jia(num) {
+				// if (num <= 0) {
+				// 	return 0;
+				// }
+
+				if (num <= 1) {
+					return 1;
+				}
+
+				return num-- + jia(num);
+
+				// return num + jia(--num);
+				// return 5 + jia(4);
+				// return 5 + 4+jia(3);
+				// return 5 + 4+3+jia(2);
+				// return 5 + 4+3+2+jia(1);
+				// return 5 + 4+3+2+1+jia(0);
+				// return 5 + 4+3+2+1+0;
+
+			}
+			
+			
+			function jia(num) {
+				
+				if (num <= 1) {
+					return 1;
+				}
+				return num-- + jia(num);
+			
+			}
+			
+
+			var sum = jia(5);
+
+			document.write("sum：" + sum);
+		</script>
+
+
+
+
+	</body>
+</html>
