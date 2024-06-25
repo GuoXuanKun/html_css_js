@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 做递归 过程  比较重要 
+			function jia(num) {
+				// if (num <= 0) {
+				// 	return 0;
+				// }
+
+				if (num <= 1) {
+					return 1;
+				}
+
+				return num-- + jia(num);
+
+				// return num + jia(--num);
+				// return 5 + jia(4);
+				// return 5 + 4+jia(3);
+				// return 5 + 4+3+jia(2);
+				// return 5 + 4+3+2+jia(1);
+				// return 5 + 4+3+2+1+jia(0);
+				// return 5 + 4+3+2+1+0;
+
+			}
+			
+			
+			function jia(num) {
+				
+				if (num <= 1) {
+					return 1;
+				}
+				return num-- + jia(num);
+			
+			}
+			
+
+			var sum = jia(5);
+
+			document.write("sum：" + sum);
+			
+
+			
+			function  cheng(num){
+				if(num<=1){
+					return 1;
+				}
+				
+				return num*cheng(--num);
+				
+				
+			}
+			document.write("<hr/>cheng:"+cheng(5));
+			
+			
+			
+			function cheng_he(num){
+				if(num<=1){
+					return 1;
+				}
+				return cheng(num)+cheng_he(--num);	
+				
+			}
+			
+			document.write("<hr/>cheng_he:"+cheng_he(5));
+			
+			
+			
+			
+			// 猴子吃桃问题：
+			// 有一堆桃子不知数目，猴子第一天吃掉一半，觉得不过瘾，
+			// 又多吃了一个，
+			//第二天照此办法，吃掉剩下桃子的一半另加一个，
+			// 天天如此．
+			// 到第十天早上，猴子发现只剩一只桃子了，问这堆桃子原来有多少个？
+			// 10 1
+			// 9  (1+1)*2   4      4/2-1 =1 
+			//  ...
+			// 3    (x/2-1)/2-1
+			// 2   x/2-1
+			// 1   x  
+			// 倒数第一天
+			function tao1(){
+				return 1;
+				
+			}
+			function tao2(){
+				return (tao1()+1)*2;
+			}
+			function tao3(){
+				return (tao2()+1)*2;
+			}
+			
+			function tao4(){
+				return (tao3()+1)*2;
+			}
+			
+			
+			function tao(day){
+				if(day==1){
+					return 1;
+				}
+				return (tao(day-1)+1)*2;
+				
+			}
+			
+			
+			document.write("<hr/>tao:"+tao(10));
+			
+			
+		</script>
+
+
+
+
+	</body>
+</html>
