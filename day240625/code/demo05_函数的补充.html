@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+			/* 在页面加载完毕之后，自动执行 函数中的代码 */
+			window.onload=function(){
+				
+				var unoObj  = 	document.getElementById("uno");
+				
+				document.write(	unoObj.value);
+				
+				
+			};
+			
+		/* 加载问题： */	
+		//  通过 id值 获得 对象的引用
+		//TypeError: Cannot read properties of null (reading 'value')
+		// var unoObj  = 	document.getElementById("uno");
+		// document.write(	unoObj.value);
+			
+		</script>
+		
+		<input id="uno" value="123" />
+		<!-- <button onclick="alert(1);"></button> -->
+		
+		
+	</body>
+</html>
