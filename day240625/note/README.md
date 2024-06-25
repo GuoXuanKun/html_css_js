@@ -1,6 +1,7 @@
 # Note 240625
 ## Review 
 - `window.confirm("")` 确认弹出框
+
 ### JavaScript
 - `function` 函数
   - 函数在定义前后都可以调用
