@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function how_much(day){
+				if(day==1){
+					return 1;
+				}
+				
+				return (how_much(--day)+1)*2
+			}
+			document.write(how_much(10));
+		</script>
+	</body>
+</html>
