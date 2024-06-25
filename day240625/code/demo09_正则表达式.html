@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 1 规则  
+			var reg1 = /^[0-9]$/;
+			document.write(reg1.test("2"));
+
+			document.write("<hr/>")
+			var reg2 = /^\d$/; // \d 整数 
+			document.write(reg2.test("2"));
+
+			document.write("<hr/>")
+			var reg3 = /^\w$/; // \d 整数+字母+下划线 
+			document.write(reg3.test(""));
+
+
+			document.write("<hr/>")
+			var reg4 = /^[0-9]*$/; // 符号 多个的
+			document.write(reg4.test("123"));
+
+			document.write("<hr/>")
+			var reg5 = /^[0-9]{6}$/; // 符号 多个的
+			document.write(reg5.test("123456"));
+
+			document.write("<hr/>")
+			var reg5 = /^[0-9]{6,8}$/; // 符号 多个的
+			document.write(reg5.test("12345678"));
+
+			document.write("<hr/>")
+			var reg5 = /^[0-9]{6,}$/; // 符号 多个的
+			document.write(reg5.test("1234"));
+			
+			/*  数字 字母  。... \d \w    */
+			document.write("<hr/>")
+			var reg5 = /^[0-9]{6,}$/; // 符号 多个的
+			document.write(reg5.test("1234"));
+			
+			// 不能以零开头 6个整数
+			document.write("<hr/>")
+			var reg5 = /^[1-9][0-9]{5}$/; // 符号 多个的
+			document.write(reg5.test("023456"));
+			
+			// 不能以零开头 6个整数
+			document.write("<hr/>")
+			var reg5 = /^[0-9a-z]{6}$/; // 符号 多个的
+			document.write(reg5.test("abcde1"));
+			
+			// 可以有数字字母注册 
+			document.write("<hr/>")
+			var reg5 = /^[0-9a-zA-Z]{6}$/; // 
+			document.write(reg5.test("abcEA1"));
+			
+			// 邮箱验证  手机号码验证 
+			
+var res = /^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/
+			/* /^
+			[1-9]\d{5}  一共六位不能以数字零开头        前 四位省市 再两位  区县
+			(18|19|([23]\d))\d{2}     四位 年份     (18|19|..)     ([23]\d))  2开头或3开头 0-9整数
+			// (abc|def|ghi)
+			
+			
+			((0[1-9])|(10|11|12))  // 月份  (0[1-9])  01 02 。。。09  或者  10 11 12
+			
+			
+			(([0-2][1-9])|10|20|30|31)  日    01 02 03  ... 11 12 13  21 22 23...   10 20 30 31 。。。 
+			
+			\d{3}[0-9Xx]
+			
+			$/  前三位  整数  第四位  0-9 大写或小写x 
+			
+			
+			*/
+
+
+		// 	 如何校验 方式：
+		
+		
+		
+		
+	var reg3 = /^规则$/;// 基本规则的学习 以及 复杂情况下（查资料，邮箱  邮编  手机号  ）
+	
+	reg3.test("要检验的字符串");  // 返回值是 true or  false  
+	
+	// 邮箱验证 ； xxxx@xxxxx.com.cn
+	//            数字字母下划线 长度 10~18之间   @   字母或数字 6~10   (.com|.cn|.com.cn)
+		
+	 
+	
+	
+			
+		</script>
+
+
+
+	</body>
+</html>
