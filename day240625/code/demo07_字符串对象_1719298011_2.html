@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			var str   ="abc";
+			var str2  = new String("abc");
+			
+			document.write(str==str2);
+			document.write("<br/>");
+			document.write(str===str2);
+			document.write("<br/>");
+			document.write(str.length);// 长度
+			document.write("<br/>");
+			document.write(str.charAt(1));// 长度  下标从0开始
+			document.write("<br/>");
+			document.write(str.concat('zhw'));// 将两个字符串拼接起来，返回给你
+			document.write("<br/>");
+			document.write(str);
+			var str3="a,b,c";
+			document.write("<br/>");
+			document.write(str3.split(','));
+			console.log(str3.split(','));
+			document.write("<br/>");
+			document.write(str3.replace(",","-"));  // 替换第一个元素
+			document.write("<br/>");
+			document.write(str3.replaceAll(",","-")); // 替换全部的元素
+			document.write("<br/>");
+			var str4="红色魔杖";
+			document.write(str4.replaceAll("色魔","**")); // 替换全部的元素
+			/*  敏感字的替换  ： 红色魔杖     */
+			
+			document.write("<br/>");
+			// 常用的方法
+			// 用于截取 文字   上传下载 地址   1 获得 后缀  获得 文件名  ... 
+			document.write("abcd".substring(1,2));  //b  起点和终点
+			document.write("<br/>");
+			document.write("abcd".substr(1,2)); //起点和长度
+			document.write("<br/>");
+			
+			//indexof
+			document.write("abcd".indexOf("b"));document.write("<br/>");
+			
+			document.write("abcdabcdabcd".lastIndexOf("b"));document.write("<br/>");
+			
+			
+			// D://abc//cde//庄老师的课件.ppt
+			//获得  课件的类型 以及 课件名 
+			
+			var url ="d://abc//cde//庄老师的课件.ppt";
+			var idx1 =  url.lastIndexOf("//");
+			document.write(idx1);
+			
+			document.write("<br/>");
+			var url2  = url.substring(idx1+2);
+			document.write(url2);
+			document.write("<br/>");
+			var idx2 = url2.lastIndexOf(".");
+			document.write(idx2);
+			url3=url2.substring(0,idx2);
+			document.write("<br/>"+url3);
+			url4=url2.substring(idx2);
+			document.write("<br/>"+url4);
+			
+		</script>
+		
+		<!-- <input type="file"/> -->
+		
+	</body>
+</html>
