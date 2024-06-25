@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<span id="hh">12</span>
+		<span id="mm">12</span>
+		<span id="ss">12</span>
+		
+		
+		<script type="text/javascript">
+			/* 默认当前时间 */
+			var now = new Date();
+			document.write(now);
+			document.write("<hr/>");
+			var end = new Date("2008/8/8 20:8:8");
+			document.write(end);
+			document.write("<hr/>");
+			var end2 = new Date();
+			end2.setFullYear("2008");
+			end2.setMonth("7"); //  注意 月份  0~11
+			end2.setDate("8");
+			end2.setHours("20");
+			end2.setMinutes("8");
+			end2.setSeconds("8");
+			document.write(end2.toLocaleString()); // 本地时间
+			document.write("<hr/>")
+			
+			document.write(now.getFullYear());
+			document.write("<br/>");
+			document.write(now.getDay());
+			
+			
+			document.write(now.getTime()); // 1070 1 1 0 0 0  到现在的毫秒数
+			// 计算距离 放学 5:00 还有多久时间
+			
+			var start  = new Date();
+			var end3 = new Date();
+			 end3.setHours("17");
+			 end3.setMinutes("0");
+			 end3.setSeconds("0");
+			 document.write("<br/>"+end3.toLocaleString());
+			 
+			 
+			 
+			 var time  = end3.getTime()-start.getTime();
+			 document.write("<hr/>"+time); // 现在距离放学的时间 毫秒数
+			 // 分别得到 时分秒 ？除  求余
+ 
+	
+	
+			  
+			 
+			 
+			 
+			 // 
+			 // 间隔执行
+			 //  参数  函数名  间隔时间 （单位毫秒） 
+			 window.setInterval(changeTime,1000);
+			 
+			 function changeTime(){
+				 
+				// document.write("ceshi<br/>");
+				 
+			 }
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+		
+		
+		
+	</body>
+</html>
