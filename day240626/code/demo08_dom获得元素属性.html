@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+			.style1{
+				background-color: yellow;
+				border: 1px solid red;
+				height: 100px;
+				width: 100px;
+				
+			}
+			
+			.style2{
+				background-color: goldenrod;
+				border: 1px solid palegreen;
+				height: 200px;
+				width: 200px;
+				
+			}
+			
+		</style>
+		
+		
+		
+	</head>
+	<body>
+
+		<a id="aid" href="http://www.baidu.com">百度一下</a>
+		
+		
+		<img  id="imgId" src="img/zhuozi1.jpg" width="100px"/>
+
+		<div id="did"></div>
+		
+		<div id="did2" class="style1"></div>
+		
+		
+		<input  type="radio" name="sex" value="男" checked="checked"/>男
+		<input  type="radio" name="sex" value="女"/>女
+		<hr />
+		<input type="checkbox"/>全选<br/>
+		<input type="checkbox" name="hobby" value="yy"/>游泳<br/>
+		<input type="checkbox" name="hobby" value="yx"/>游戏<br/>
+		<input type="checkbox" name="hobby" value="yj"/>游金<br/>
+		<button>全选</button><button>全不选</button><button>反选</button>
+		
+		
+		
+
+		<script type="text/javascript">
+			var aObj = document.getElementById("aid");
+			// 获得a标签的href属性 
+			console.log(aObj.href);
+			aObj.href="http://www.360.com";
+			aObj.innerHTML="360";
+
+
+			var imgObj  = document.getElementById("imgId");
+			imgObj.src="img/wyz.webp";
+			// imgObj.width="200";
+			// 可以通过 style属性 修改  样式
+			imgObj.style.width="300px"; // 设置 成  内联样式
+			imgObj.style.border="5px solid red"; // 设置 成  内联样式
+			
+			var divObj  = document.getElementById("did");
+			// 修改 标签 样式 的方法一： 通过style属性逐个 修改 
+ 			divObj.style.height="200px";
+			divObj.style.width="200px";
+			divObj.style.backgroundColor="yellow";// 样式名 在 css中 单词和单词之间用 - 隔开 ，在js中 使用驼峰式写法 
+			
+			// 修改 标签 样式 的方法二： 通过class属性的值  修改 
+			var div2Obj  = document.getElementById("did2");
+			div2Obj.className="style2";
+			
+			// 如何获得 单选 或多选的状态
+			
+			var sexArr= document.getElementsByName("sex");
+			console.log(sexArr[0]);
+			console.log(sexArr[0].checked);
+			console.log(sexArr[1]);
+			console.log(sexArr[1].checked);
+			
+			for(var i=0;i<sexArr.length;i++){
+				
+				if(sexArr[i].checked){
+					console.log("被选中的性别："+sexArr[i].value);
+				}
+				
+			}
+			
+			sexArr[0].checked=false;
+			sexArr[1].checked=true;
+			
+			
+			// 多选框同理 （    1  设置一些多选框，一些按钮 实现 全选 反选  全不选 
+							// 2  最上面 有一个 多选框 ，当点击多选框的时候（选中），底下三个多选框 都 改成选中状态 ，
+											  //      当取消，三个都为 取消状态
+												//  当我们 手动取消是三个中的任意一个，最上面的多选框状态改为 未选中状态
+			  
+			  ）
+			 
+			 
+			 
+			
+			
+						
+		</script>
+
+
+
+
+	</body>
+</html>
