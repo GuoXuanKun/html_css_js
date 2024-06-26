@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 后续 前后台的再演示: 当我点击提交按钮的时候，会先触发它，设置函数 返回值true 继续提交 false 不提交  -->
+		<form onsubmit=""></form>
+		
+		<input id="sname" onblur="func1()" onfocus="func2()"/>
+		
+		<script type="text/javascript">
+			function func1(){
+				console.log("onblur 失去焦点");
+				var snameObj   = document.getElementById("sname");
+				console.log(snameObj.value);
+				// if(snameObj.value==null){
+				// 	console.log("为null");
+				// }
+				if(snameObj.value==""){
+					console.log("为空字符串");
+					//以及后面可以加入 ajax（局部刷新，异步调用） 
+				}
+			}
+			
+			function func2(){
+				console.log("onfocus 获得焦点");
+				
+			}
+			window.onload=function(){  //当页面加载完毕之后，再执行（防止部分标签未加载的时候，js找不到）
+				
+				
+			}
+		</script>
+		
+		
+	</body>
+</html>
