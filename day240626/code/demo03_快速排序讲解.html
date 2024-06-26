@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			var arr = [5, 3, 10, 7, 4, 6, 9, 2, 1, 8];
+			document.write(arr);
+			document.write("<br/>");
+
+			quickSort(arr, 0, arr.length - 1);
+
+			function quickSort(arr, start, end) {
+
+				// 先判断一下，起点 大于等于 终点
+				if (start >= end) {
+					return;
+				}
+
+				var num = arr[start]; // 注意：起点的数 作为 哨兵
+				var left = start;
+				var right = end;
+
+				while (left < right) {
+
+					while (arr[right] > num && left < right) { //&& left < right  防止 越界 （右边比着比着 跑去跟 左边的比较）
+						right--;
+					}
+
+
+					while (arr[left] <= num && left < right) {
+						left++;
+					}
+
+
+
+				
+						var temp = arr[right];
+						arr[right] = arr[left];
+						arr[left] = temp;
+						
+					
+
+
+				}
+
+
+				var temp = arr[left];
+				arr[left] = arr[start];
+				arr[start] = temp;
+
+				debugger
+				document.write(arr);
+				document.write("<br/>");
+
+
+				// 一左一右：
+				quickSort(arr,start,left-1);// 怎么直到 起点 和 终点
+
+				quickSort(arr,left+1,end);// 怎么直到 起点 和 终点
+
+
+
+			}
+
+			// console.log(arr);
+			document.write(arr);
+		</script>
+
+
+
+
+	</body>
+</html>
