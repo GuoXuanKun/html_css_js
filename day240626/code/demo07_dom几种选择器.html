@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<p id="p1" class="pc" name="pn">p1</p>
+	<!-- 	<p id="p2" class="pc" name="pn">p2</p>
+		<p id="p3" class="pc" name="pn">p3</p>
+		<p id="p4" class="pc" name="pn">p4</p> -->
+		
+		<script type="text/javascript">
+			console.log(document.getElementById("p1").innerHTML); 
+			
+			
+			
+			// 以下三种获得的都是 数组
+			var pArr  = document.getElementsByClassName("pc");
+			console.log(pArr[0].innerHTML);
+			// console.log(pArr[1].innerHTML);
+			
+			var pArr2  = document.getElementsByName("pn");
+			for(var i=0;i<pArr2.length;i++){
+				
+				console.log(pArr2[i].innerHTML);
+				
+			}
+			
+			// for(var x in pArr2){
+			// 	console.log(pArr2[x].innerHTML);	
+			// }
+			
+			var pArr3  = document.getElementsByTagName("p");
+			for(var i=0;i<pArr3.length;i++){
+				
+				console.log(pArr3[i].innerHTML);
+				
+			}
+			
+			
+			 
+			
+			
+		</script>
+		
+
+	</body>
+</html>
