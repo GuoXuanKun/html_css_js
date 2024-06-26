@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			var arr = [5, 3, 10, 7, 4, 6, 9, 2, 1, 8];
+
+			quickSort(arr);
+
+			function quickSort(arr) {
+				// 获得哨兵（左边第一个）
+				//debugger   // js中可以使用debugger 方式 单点调试   在浏览器中 右键检查的时候，可以实现 
+				var num = arr[0];
+				var left = 0;
+				var right = arr.length - 1;
+				while (left < right) {
+					while (arr[right] >= num) { // 当右边的数  大于或等于  哨兵的时候，下标指向下一位（往内移一位） 
+						right--;
+					}
+					if (arr[right] < num) { // 当右边的数比哨兵小，则左右两个坐标的值 交换位置 
+
+						var temp = arr[right];
+						arr[right] = arr[left];
+						arr[left] = temp;
+						left++;
+
+					}
+
+					while (arr[left] < num) { // 当左边的数  小于 哨兵  的时候，下标指向下一位（往内移一位）
+						left++;
+					}
+
+
+					if (arr[left] > num) { // 当右边的数 大或等于 哨兵，则左右两个坐标的值 交换位置
+
+						var temp = arr[right];
+						arr[right] = arr[left];
+						arr[left] = temp;
+						right--;
+
+					}
+
+
+				}
+
+
+
+			}
+			
+			// console.log(arr);
+			document.write(arr);
+			
+			
+		</script>
+
+
+
+
+	</body>
+</html>
