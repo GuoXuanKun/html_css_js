@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="pid"><b>内容</b></p>
+
+
+
+		<div id="did"></div>
+		<a id="aid"></a>
+		<span id="sid"></span>
+		<input id="sname" value="zhw" />
+
+		<script type="text/javascript">
+			// pObj 是 id是 pid的元素/标签的引用
+			var pObj = document.getElementById("pid");
+			console.log(pObj.innerHTML);
+			// <b>内容</b> 
+			// 将元素中的内容显示出来，如果内容有标签，也会把标签识别成文字的形式一起显示出来
+
+			console.log(pObj.innerText);
+			// 内容
+			// 忽略内容中的标签，只关注 文本
+
+
+			pObj.innerHTML = "新内容1"; // 修改内容（将原有的内容全部替换掉），
+			pObj.innerText = "新内容2";
+
+			pObj.innerHTML = "<s>新内容1</s>"; // 修改内容（将原有的内容全部替换掉），
+			//  会在标签中 将 内容中涉及到的 标签 转换成 原有的形式
+			pObj.innerText = "<s>新内容2</s>";
+			// 不会转化，只会当文本显示  <s>新内容2</s>
+			
+			
+			var snameObj  = document.getElementById("sname");
+			 // snameObj.innerHTML="学生名";
+			
+			 snameObj.value="666";
+			console.log(snameObj.value);
+			
+			
+			// 实现一个小练习：
+			// p标签  id = show
+			// input id ="content"
+			// input button  onclick 
+			 // 定义一个 函数  checkContent  要求 0~9之间 6位数 （升级 也可以实现邮箱验证等等）
+			 // 点击按钮；获得 content 内容（value值） 进行 校验  结果显示在 show上面
+			 
+			 
+			
+			
+			
+			
+			
+		</script>
+
+
+
+
+	</body>
+</html>
