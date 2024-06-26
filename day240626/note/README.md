@@ -26,8 +26,8 @@
         - `document.getElementsByName(name)`getElementsByName方法可以获取所有与指定名称匹配的元素集合。这个方法返回的是一个类数组的NodeList对象。
         - `document.getElementsByTagName(tagName)`: 这个方法返回文档中所有指定HTML标签的元素的集合。
       - Selector
-      - `document.querySelector(selector)`: 这个方法返回文档中匹配指定CSS选择器的第一个元素。这是一种非常强大的选择器，因为它可以使用复杂的CSS选择器来获取元素。
-      - `document.querySelectorAll(selector)`: 这个方法返回文档中匹配指定CSS选择器的所有元素的集合。
+        - `document.querySelector(selector)`: 这个方法返回文档中匹配指定CSS选择器的第一个元素。这是一种非常强大的选择器，因为它可以使用复杂的CSS选择器来获取元素。
+        - `document.querySelectorAll(selector)`: 这个方法返回文档中匹配指定CSS选择器的所有元素的集合。
     - 获得元素属性
       - 通过 style 属性逐个改
         - 样式名 在 css 中 单词之间用 - 隔开 , 在 js 中用 驼峰式写法
