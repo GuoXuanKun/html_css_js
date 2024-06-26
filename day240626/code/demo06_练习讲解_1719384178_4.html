@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		
+		
+		<p id="show"></p>
+		<input type="text" id="content"/>
+		<input  type="button" onclick="checkContent()" value="点一下"/>
+		
+		
+		
+		<script type="text/javascript">
+			
+			function checkContent(){
+				var showObj  = document.getElementById("show");
+				var contentObj  = document.getElementById("content");
+				
+				var content  = contentObj.value;
+				
+				var reg = /^[0-9]{6}$/;
+				if(reg.test(content)){
+					// showObj.innerText="输入正确";
+					showObj.innerHTML="<span style='color:green;'>输入正确</span>";
+				}else{
+					// showObj.innerText="输入错误";
+					showObj.innerHTML="<span style='color:red;'>输入错误</span>";
+				}
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
