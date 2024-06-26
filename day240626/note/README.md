@@ -3,7 +3,7 @@
 ## Review
 - `window.onload=function(){  //当页面加载完毕之后，再执行（防止部分标签未加载的时候，js找不到）}`
 ### JavaScript
--  debugger
+- debugger
   - 在 JavaScript 中 进行单点调试 在浏览器中右键检查
 - 自定义对象
   - ![img_3.png](img_3.png)
