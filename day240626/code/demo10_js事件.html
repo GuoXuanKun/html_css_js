@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div onclick="alert(1)">
+			<div onclick="alert(2)">
+				<div onclick="alert(3)">
+					点击一下
+				</div>
+			</div>
+		</div>
+
+		<button id="btn1">点一下</button>
+
+		<button id="btn2">点一下2</button>
+
+		<hr />
+		<div id="d1">
+			<div id="d2">
+				<div id="d3">点击一下</div>
+			</div>
+		</div>
+
+		<hr />
+		<button id="btn3">点一下3</button>
+
+		<script type="text/javascript">
+			/* 使用 DOM对象中绑定事件  */
+			document.getElementById("btn1").onclick = function() {
+
+				alert("点一下");
+
+			};
+
+
+			/* 使用 DOM对象中绑定事件  */
+			document.getElementById("btn2").addEventListener("click", func2);
+
+			function func1() {
+				alert("点一下1");
+			}
+
+			function func2() {
+				alert("点一下2");
+			}
+
+			function func3() {
+				alert("点一下3");
+			}
+
+			document.getElementById("d1").addEventListener("click", func1, true);
+			document.getElementById("d2").addEventListener("click", func2, true);
+			document.getElementById("d3").addEventListener("click", func3, true);
+
+
+
+
+			// document.getElementById("btn3").addEventListener("click", function() {
+			// 	alert("btn3");
+			// });
+			
+			// 移除 事件 （注意点：只能移除 非 匿名函数 ）
+			function func4() {
+				alert("btn3");
+				document.getElementById("btn3").removeEventListener("click", func4);
+
+			}
+			document.getElementById("btn3").addEventListener("click", func4);
+		</script>
+
+	</body>
+</html>
