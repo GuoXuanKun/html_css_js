@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="checkbox" id="all" onclick="func()" />全选<br />
+		<input type="checkbox" name="hobby" value="yy" onclick="func2()"/>游泳<br />
+		<input type="checkbox" name="hobby" value="yx" onclick="func2()"/>游戏<br />
+		<input type="checkbox" name="hobby" value="yj" onclick="func2()"/>游金<br />
+		
+		<button onclick="selectAll()">全选</button>
+		<button onclick="selectNotAll()">全不选</button>
+		<button onclick="selectRAll()">反选</button>
+
+		<script type="text/javascript">
+			function selectAll() {
+
+				var hobbyArr = document.getElementsByName("hobby");
+				for (var i = 0; i < hobbyArr.length; i++) {
+					hobbyArr[i].checked = true;
+				}
+				document.getElementById("all").checked=true;
+				
+				
+
+			}
+
+			function selectNotAll() {
+
+				var hobbyArr = document.getElementsByName("hobby");
+				for (var i = 0; i < hobbyArr.length; i++) {
+					hobbyArr[i].checked = false;
+				}
+				document.getElementById("all").checked=false;
+			}
+
+			function selectRAll() {
+
+				var hobbyArr = document.getElementsByName("hobby");
+				for (var i = 0; i < hobbyArr.length; i++) {
+					hobbyArr[i].checked = !hobbyArr[i].checked;
+				}
+				func2();
+
+			}
+
+			// 全选的复选框：
+			function func() {
+
+				var allObj = document.getElementById("all");
+
+				if (allObj.checked) {
+					selectAll();
+
+				} else {
+					selectNotAll();
+				}
+
+
+			}
+			function func2(){
+				
+				var hobbyArr = document.getElementsByName("hobby");
+					var flag = true;
+					
+				for(var i=0;i<hobbyArr.length;i++){
+					
+					flag = flag && hobbyArr[i].checked;
+				}
+				
+				document.getElementById("all").checked=flag;
+				
+				
+			}
+			
+			
+			
+		</script>
+
+
+
+
+
+	</body>
+</html>
