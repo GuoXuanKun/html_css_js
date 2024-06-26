@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			//自定义对象的两种写法
+			var obj  = new Object();
+			obj.sname ="zhangsan";
+			obj.age =18;
+			obj.show=function(){
+				alert("我叫"+this.sname);  // this 当前对象
+			}
+			obj.info=function(){
+				return "我叫"+this.sname+",我年龄是"+this.age;
+			}
+			
+			console.log(obj);
+			console.log(obj.sname);
+			console.log(obj.age);
+			// obj.show();
+			console.log(obj.info());
+			
+			
+			
+			var obj2  = {
+				sname:"李四",
+				age:17,
+				show:function(){
+					alert("我叫"+this.sname);
+				}
+			}
+			obj2.addr="厦门";  // 再网上添加的
+			
+			console.log(obj2);
+			obj2.show();
+			
+			
+			
+			
+			
+			
+		</script>
+		
+		
+		
+	</body>
+</html>
