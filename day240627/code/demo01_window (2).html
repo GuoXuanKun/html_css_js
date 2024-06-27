@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		支付成功，<span id="num"></span>秒后跳转到xxx界面，<a href="http://www.baidu.com">直接跳转</a><button id="btn">取消跳转</button>
+		<script type="text/javascript">
+			//延迟执行 
+			//window.setTimeout("alert(666)",3000);
+			
+			//window.open("http://www.baidu.com","_self");
+			//window.open("http://www.baidu.com","_blank"); // 默认  新页面打开
+			
+			// function jumpPage(){
+				
+			// 	window.open("http://www.baidu.com","_self");
+				
+			// }
+			// var myTimeout = window.setTimeout("jumpPage()",3000);
+			// window.setTimeout(jumpPage,3000);
+			// window.clearTimeout(myTimeout);
+			
+			// 练习：1 实现 倒计时（十个数） 
+				//	2 取消跳转: 倒计时 和  延迟执行 都 取消掉了.
+				
+			var num =10;
+			
+			function changeNum(){
+			
+				document.getElementById("num").innerText=num--;
+			}
+			var myInterval = window.setInterval(changeNum,1000);
+			
+			var myTimeout  = window.setTimeout(jumpPage,10000);
+			
+			function jumpPage(){
+				window.open("http://www.baidu.com","_self");
+			}
+			
+			document.getElementById("btn").onclick=function(){
+				window.clearTimeout(myTimeout);
+				window.clearInterval(myInterval);
+				
+			};
+			
+			
+		</script>
+		
+		
+	</body>
+</html>
