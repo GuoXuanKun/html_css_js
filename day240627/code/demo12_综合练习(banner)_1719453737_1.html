@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+
+
+
+
+
+
+
+
+
+		<style type="text/css">
+			body {
+				margin: 0;
+				min-width: 1200px;
+				/* 最小 宽度  */
+			}
+
+			#banner-out {
+
+				height: 439px;
+				background-image: url(img/bg0.jpeg);
+				background-position: center;
+				transition: all 0.3s ease;
+				/* 需要的时候，根据 百度 查找（  搜商  ） */
+			}
+
+			#banner-in {
+				height: 439px;
+				width: 1200px;
+				/* background-color: rgba(255, 0, 0, .4); */
+				background-position: center;
+				margin: auto;
+
+				position: relative;
+				cursor: pointer;
+
+			}
+
+			#banner-in:hover>#toLeft,
+			#banner-in:hover>#toRight,
+			#banner-in:hover>#tabs {
+				opacity: 0.6;
+				/* rgba */
+
+			}
+
+			#toLeft,
+			#toRight {
+				width: 50px;
+				height: 100px;
+				background-image: url(img/sprite.png);
+
+				position: absolute;
+				top: 170px;
+				/*  */
+				opacity: 0.3;
+
+			}
+
+
+			#toLeft {
+
+				left: 50px;
+
+
+			}
+
+			#toRight {
+				right: 50px;
+				background-position: 50px;
+			}
+
+			#tabs {
+				width: 204px;
+				height: 34px;
+				background-color: yellow;
+				position: absolute;
+				bottom: 50px;
+				left: 500px;
+				/*    */
+				border-radius: 16px;
+				opacity: 0.3;
+
+			}
+
+			#tabs>div {
+				width: 28px;
+				height: 28px;
+				border: 1px solid red;
+				text-align: center;
+				line-height: 28px;
+				float: left;
+				border-radius: 14px;
+				margin: 2px;
+				box-shadow: 0px 0px 5px red;
+			}
+
+			#toJump {
+				display: inline-block;
+				width: 1200px;
+				height: 439px;
+				/* background-color: yellow; */
+
+
+			}
+		</style>
+
+		<script type="text/javascript">
+			// 背景图片的地址 放在一个数组中
+			var imgArr = new Array();
+			imgArr[0] = "url(img/bg0.jpeg)";
+			imgArr[1] = "url(img/bg1.jpeg)";
+			imgArr[2] = "url(img/bg2.jpeg)";
+			imgArr[3] = "url(img/bg3.jpeg)";
+			imgArr[4] = "url(img/bg4.jpeg)";
+			imgArr[5] = "url(img/bg5.jpeg)";
+
+			// 跳转页面地址 放在一个数组中
+			var urlArr = new Array();
+			urlArr[0] = "http://www.baidu.com";
+			urlArr[1] = "http://www.360.com";
+			urlArr[2] = "http://www.mi.com";
+			urlArr[3] = "http://www.sina.com";
+			urlArr[4] = "http://www.163.com";
+			urlArr[5] = "http://www.4399.com";
+
+
+			// 下标（索引）全局 
+			var index = 0;
+
+			function change() {
+
+				document.getElementById("banner-out").style.backgroundImage = imgArr[index];
+				document.getElementById("toJump").href = urlArr[index];
+
+				var tabArr = document.getElementsByClassName("tab");
+
+				for (var i = 0; i < tabArr.length; i++) {
+
+					if (i == index) {
+						tabArr[i].style.backgroundColor = "pink";
+					} else {
+						tabArr[i].style.backgroundColor = "yellow";
+					}
+
+				}
+
+
+			}
+
+
+
+			function toRight() {
+
+				index++;
+				if (index >= 6) {
+					index = 0;
+				}
+
+				change();
+
+
+
+
+			}
+
+			function toLeft() {
+
+				index--;
+				if (index < 0) {
+					index = 5;
+				}
+				change();
+			}
+
+			function jump(num) {
+
+				index = num;
+				change();
+
+			}
+			/*  间隔执行  */
+			var myInterval = window.setInterval(toRight, 3000);
+
+			// js在前，标签渲染在后，所以，保证 当 窗口 加载完毕之后，再执行代码
+			window.onload = function() {
+
+				// var binObj = document.getElementsByClassName("bannerInClass")[0];
+				var binObj = document.getElementById("banner-in");
+				// 鼠标覆盖
+				binObj.onmouseover = function() {
+					window.clearInterval(myInterval);
+				};
+				// 鼠标移开
+				binObj.onmouseout = function() {
+					// 不能有var了，重新 声明 局部变量 
+					myInterval = window.setInterval(toRight, 3000);
+
+				};
+			}
+		</script>
+
+
+
+
+
+	</head>
+	<body>
+		<div id="banner-out">
+
+			<div id="banner-in" class="bannerInClass">
+
+				<div id="toLeft" onclick="toLeft()"></div>
+
+				<div id="toRight" onclick="toRight()"></div>
+
+				<div id="tabs">
+					<div style="background-color: pink;" class="tab" onclick="jump(0)">1</div>
+					<div class="tab" onclick="jump(1)">2</div>
+					<div class="tab" onclick="jump(2)">3</div>
+					<div class="tab" onclick="jump(3)">4</div>
+					<div class="tab" onclick="jump(4)">5</div>
+					<div class="tab" onclick="jump(5)">6</div>
+
+				</div>
+				<a id="toJump" href="http://www.baidu.com">
+				</a>
+			</div>
+
+		</div>
+
+		<!-- 	<button onclick="toRight()">下一页</button>
+		<button onclick="toLeft()">上一页</button>	 -->
+
+
+
+
+
+	</body>
+</html>
